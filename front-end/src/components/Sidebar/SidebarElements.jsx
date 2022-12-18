@@ -57,7 +57,10 @@ color: #fff;
 cursor: pointer;
 
 &:hover {
-    color: #2330FF;
+    color: 	#ff5f1f;
     transition: 0.2s ease-in-out;
+    border-bottom: 3px solid #ff5f1f;
+    border-top: 3px solid #ff5f1f;
+    transition: border-width .2s;
 }
 `;

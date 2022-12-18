@@ -6,7 +6,7 @@ export const homeObjOne = {
   topLine: "Schedule",
   headline: "Lock-in your next appointment",
   description:
-    "Don't see what you are looking for? Direct message @henrysbarbershop on Instagram.",
+    "Can't find a time that works? Direct message @Henrysbarbershop on Instagram.",
   // buttonLabel: "Get started",
   flip: false, //switches around the columns
   // img: '/images/svg-1.svg',
@@ -23,7 +23,8 @@ export const homeObjTwo = {
   darkDescription: true,
   topLine: "Gallery",
   headline: "Check out my some of my work!",
-  description: "For more content, checkout @Henrysbarbershop on Instagram!",
+  description:
+    "For more content and information, checkout @Henrysbarbershop on Instagram!",
   // buttonLabel: 'Learn More',
   flip: true,
   // img: '/images/svg-4.svg',
