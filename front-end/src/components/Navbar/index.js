@@ -38,8 +38,12 @@ const Navbar = ({ toggle }) => {
             <NavLogo to="/" onClick={toggleHome}>
               HENRY'S BARBERSHOP
             </NavLogo>
-            <MobileIcon onClick={toggle}>
-              <FaBars />
+            <MobileIcon
+              onMouseOver={({ target }) => (target.style.color = "#ff5f1f")}
+              onMouseOut={({ target }) => (target.style.color = "black")}
+              onClick={toggle}
+            >
+              <FaBars style={{ color: "black" }} />
             </MobileIcon>
             <NavMenu>
               <NavItem>

@@ -44,8 +44,9 @@ export const SocialLogo = styled(Link)`
   font-weight: bold;
 
   &:hover {
-    color: 	#000;
+    color: #000;
     transition: 0.2s ease-in-out;
+  }
 `;
 
 export const SocialIcons = styled.div`
@@ -59,8 +60,9 @@ export const SocialIconLink = styled.a`
   font-size: 24px;
 
   &:hover {
-    color: 	#000;
+    color: #000;
     transition: 0.2s ease-in-out;
+  }
 `;
 
 export const WebsiteRights = styled.small`
