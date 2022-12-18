@@ -27,7 +27,7 @@ const LandingSection = () => {
       </LandingBg>
       <LandingContent>
         <LandingH1>This is Henry's Barbershop</LandingH1>
-        <LandingP>Schedule your next haircut today</LandingP>
+        <LandingP>Rediscover confidence</LandingP>
         <LandingBtnWrapper>
           <Button
             to="schedule"
