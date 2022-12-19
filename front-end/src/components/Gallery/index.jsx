@@ -1,4 +1,6 @@
 import React from "react";
+import Carousel from "./Carousel";
+
 import {
   InfoContainer,
   InfoWrapper,
@@ -43,7 +45,9 @@ const Gallery = () => {
               </TextWrapper>
             </Column1>
             <Column2>
-              <RightWrap>{/* can put in additional elements here */}</RightWrap>
+              <RightWrap>
+                <Carousel />
+              </RightWrap>
             </Column2>
           </InfoRow>
         </InfoWrapper>
