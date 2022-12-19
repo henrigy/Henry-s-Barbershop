@@ -21,10 +21,10 @@ const Reviews = () => {
             <Column1>
               <TextWrapper>
                 <TopLine>Reviews</TopLine>
-                <Heading>Please let us know about your experience!</Heading>
+                <Heading>Let us know about your experience</Heading>
                 <Subtitle>
-                  Comment about your experience, upload a picture, and leave us
-                  your thoughts!
+                  Please comment about your experience, upload a picture, and
+                  leave us your thoughts!
                 </Subtitle>
               </TextWrapper>
             </Column1>
