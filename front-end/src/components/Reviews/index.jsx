@@ -10,29 +10,21 @@ import {
   Heading,
   Subtitle,
   RightWrap,
-} from "./InfoElements";
+} from "./ReviewsElements";
 
-const InfoSection = ({
-  lightBg,
-  id,
-  flip,
-  topLine,
-  lightText,
-  headline,
-  darkDescription,
-  description,
-}) => {
+const Reviews = () => {
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer id={"reviews"}>
         <InfoWrapper>
-          <InfoRow flip={flip}>
+          <InfoRow>
             <Column1>
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkDescription={darkDescription}>
-                  {description}
+                <TopLine>Reviews</TopLine>
+                <Heading>Please let us know about your experience!</Heading>
+                <Subtitle>
+                  Comment about your experience, upload a picture, and leave us
+                  your thoughts!
                 </Subtitle>
               </TextWrapper>
             </Column1>
@@ -46,4 +38,4 @@ const InfoSection = ({
   );
 };
 
-export default InfoSection;
+export default Reviews;

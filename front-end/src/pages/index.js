@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
-import InfoSection from "../components/InfoSection";
-import {
-  homeObjOne,
-  homeObjTwo,
-  homeObjThree,
-} from "../components/InfoSection/Data";
+import Gallery from "../components/Gallery";
 import LandingSection from "../components/Landing";
 import Navbar from "../components/Navbar";
+import Reviews from "../components/Reviews";
+import Schedule from "../components/Schedule";
 import Sidebar from "../components/Sidebar";
 
 const Home = () => {
@@ -22,9 +19,10 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <LandingSection />
-      <InfoSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} />
-      <InfoSection {...homeObjThree} />
+      <Schedule />
+      <Gallery />
+      <Reviews />
+
       <Footer />
     </>
   );
