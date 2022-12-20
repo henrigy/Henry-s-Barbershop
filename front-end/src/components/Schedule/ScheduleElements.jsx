@@ -9,7 +9,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  min-height: 100vh;
+  min-height: 92vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -23,13 +23,16 @@ export const InfoRow = styled.div`
   align-items: center;
   grid-template-areas: "col1 col2";
   @media screen and (max-width: 768px) {
-    grid-template-areas: "col1 col2";
+    grid-template-areas: "col1 col1" "col2 col2";
   }
 `;
 export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0px;
+  }
 `;
 export const Column2 = styled.div`
   margin-bottom: 15px;

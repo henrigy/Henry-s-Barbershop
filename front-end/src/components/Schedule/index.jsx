@@ -1,4 +1,5 @@
 import React from "react";
+import Calendly from "./Calendly";
 import {
   InfoContainer,
   InfoWrapper,
@@ -43,7 +44,9 @@ const Schedule = () => {
               </TextWrapper>
             </Column1>
             <Column2>
-              <RightWrap>{/* can put in additional elements here */}</RightWrap>
+              <RightWrap>
+                <Calendly />
+              </RightWrap>
             </Column2>
           </InfoRow>
         </InfoWrapper>
