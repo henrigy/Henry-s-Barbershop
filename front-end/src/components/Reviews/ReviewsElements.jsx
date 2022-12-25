@@ -1,4 +1,3 @@
-import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
@@ -74,21 +73,4 @@ export const Subtitle = styled.p`
 export const RightWrap = styled.div`
   max-width: 555px;
   height: 100%;
-`;
-
-export const ReviewsBtnWrapper = styled.div`
-  margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const ArrowForward = styled(MdArrowForward)`
-  margin-left: 8px;
-  font-size: 20px;
-`;
-
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-  margin-left: 8px;
-  font-size: 20px;
 `;
