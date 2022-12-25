@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "../ButtonElement";
+import PostModal from "../PostModal";
 
 import {
   InfoContainer,
@@ -11,9 +13,23 @@ import {
   Heading,
   Subtitle,
   RightWrap,
+  ReviewsBtnWrapper,
+  ArrowForward,
+  ArrowRight,
 } from "./ReviewsElements";
 
 const Reviews = () => {
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <>
       <InfoContainer id={"reviews"}>
@@ -27,7 +43,23 @@ const Reviews = () => {
                   Please comment about your experience, upload a picture, and
                   leave us your thoughts!
                 </Subtitle>
+                <ReviewsBtnWrapper>
+                  <Button
+                    onMouseEnter={onHover}
+                    onMouseLeave={onHover}
+                    primary="true"
+                    dark="true"
+                    smooth={true}
+                    duration={500}
+                    onClick={openModal}
+                    // spy={true}
+                    // exact="true"
+                  >
+                    POST A REVIEW {hover ? <ArrowForward /> : <ArrowRight />}
+                  </Button>{" "}
+                </ReviewsBtnWrapper>
               </TextWrapper>
+              <PostModal showModal={showModal} setShowModal={setShowModal} />
             </Column1>
             <Column2>
               <RightWrap>{/* can put in additional elements here */}</RightWrap>
