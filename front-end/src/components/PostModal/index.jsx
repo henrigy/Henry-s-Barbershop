@@ -15,8 +15,8 @@ const PostModal = ({ showModal, setShowModal }) => {
     config: {
       duration: 250,
     },
-    opacity: showModal ? 0 : 1,
-    transform: showModal ? "translateY(-100%)" : "translateY(0%)",
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? "translateY(0%)" : "translateY(-100%)",
   });
 
   const closeModal = (e) => {
