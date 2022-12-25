@@ -5,6 +5,7 @@ const Calendly = () => {
   return (
     <CalendlyContainer>
       <iframe
+        title="Calendly"
         src="https://calendly.com/henrysbarbershop/haircut"
         width="100%"
         height="100%"

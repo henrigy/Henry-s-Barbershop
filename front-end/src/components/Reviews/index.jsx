@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "../ButtonElement";
+
 import {
   InfoContainer,
   InfoWrapper,
@@ -10,9 +12,17 @@ import {
   Heading,
   Subtitle,
   RightWrap,
+  ReviewsBtnWrapper,
+  ArrowForward,
+  ArrowRight,
 } from "./ReviewsElements";
 
 const Reviews = () => {
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
   return (
     <>
       <InfoContainer id={"reviews"}>
@@ -26,6 +36,20 @@ const Reviews = () => {
                   Please comment about your experience, upload a picture, and
                   leave us your thoughts!
                 </Subtitle>
+                <ReviewsBtnWrapper>
+                  <Button
+                    onMouseEnter={onHover}
+                    onMouseLeave={onHover}
+                    primary="true"
+                    dark="true"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                  >
+                    POST A REVIEW {hover ? <ArrowForward /> : <ArrowRight />}
+                  </Button>
+                </ReviewsBtnWrapper>
               </TextWrapper>
             </Column1>
             <Column2>
