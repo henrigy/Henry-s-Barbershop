@@ -32,12 +32,18 @@ export const Column1 = styled.div`
   grid-area: col1;
   @media screen and (max-width: 768px) {
     margin-bottom: 0px;
+    height: 32vh;
   }
 `;
 export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
+  height: 75vh;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0px;
+    height: 60vh;
+  }
 `;
 export const TextWrapper = styled.div`
   max-width: 540px;

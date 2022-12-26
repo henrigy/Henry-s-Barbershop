@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "../ButtonElement";
+import { Button2 } from "../ButtonElement";
 import PostModal from "../PostModal";
 
 import {
@@ -44,7 +44,7 @@ const Reviews = () => {
                   leave us your thoughts!
                 </Subtitle>
                 <ReviewsBtnWrapper>
-                  <Button
+                  <Button2
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     primary="true"
@@ -56,7 +56,7 @@ const Reviews = () => {
                     // exact="true"
                   >
                     POST A REVIEW {hover ? <ArrowForward /> : <ArrowRight />}
-                  </Button>{" "}
+                  </Button2>
                 </ReviewsBtnWrapper>
               </TextWrapper>
               <PostModal showModal={showModal} setShowModal={setShowModal} />
