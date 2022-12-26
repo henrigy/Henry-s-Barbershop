@@ -46,7 +46,15 @@ const PostModal = ({ showModal, setShowModal }) => {
         <Background onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}>
             <ModalWrapper showModal={showModal}>
-              <ModalContent> Add Modal Content Here</ModalContent>
+              <ModalContent>
+                <h1>My Review</h1>
+                <h2>Fill out name</h2>
+                <h2>
+                  Rating out of 5 Stars (Have stars that user can hover over)
+                </h2>
+                <h2>Comment</h2>
+                <button> Placeholder for now</button>
+              </ModalContent>
               <CloseModalButton
                 aria-label="Close modal"
                 onClick={() => setShowModal((prev) => !prev)}
