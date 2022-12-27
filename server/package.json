@@ -1,0 +1,13 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Planning to use MongoDB as the database for the reviews",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start" : "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Henry Liu <11.henrybliu@gmail.com>",
+  "license": "ISC"
+}
