@@ -23,10 +23,10 @@ export const Button = styled(Link)`
 
 export const Button2 = styled.div`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? "#ff5f1f" : "#010606")};
+  background: ${({ primary }) => (primary ? "#ff5f1f" : "#111")};
   white-space: nowrap;
   padding: ${({ big }) => (big ? "14px  48px" : "12px 30px")};
-  color: ${({ dark }) => (dark ? "#010606" : "#fff")};
+  color: ${({ dark }) => (dark ? "#010606" : "#eee")};
   font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
   outline: none;
   border: none;
@@ -37,6 +37,6 @@ export const Button2 = styled.div`
   transition: all 0.2s ease-in-out;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? "#fff" : "#ff5f1f")};
+    background: ${({ primary }) => (primary ? "#eee" : "#ff5f1f")};
   }
 `;

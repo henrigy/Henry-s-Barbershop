@@ -20,7 +20,7 @@ export const ModalWrapper = styled.div`
   height: 60vh;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #f9f9f9;
-  color: #000;
+  color: #111;
   display: grid;
   position: relative;
   z-index: 1001;
@@ -34,7 +34,7 @@ export const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 1.8;
-  color: #141414;
+  color: #111;
 `;
 
 export const CloseModalButton = styled(FaTimes)`

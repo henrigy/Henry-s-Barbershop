@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button2 } from "../ButtonElement";
-import PostModal from "../PostModal";
+import PostModal from "./PostModal";
 
 import {
   InfoContainer,
@@ -82,10 +82,10 @@ const Reviews = () => {
                   </Button2>
                 </ReviewsBtnWrapper>
               </TextWrapper>
-              <PostModal showModal={showModal} setShowModal={setShowModal} />
             </ReviewsColumn1>
+            <PostModal showModal={showModal} setShowModal={setShowModal} />
             <Column2>
-              <RightWrap>{/* can put in additional elements here */}</RightWrap>
+              <RightWrap>{/* CREATE A REVIEWS DISPLAY HERE */}</RightWrap>
             </Column2>
           </InfoRow>
         </InfoWrapper>

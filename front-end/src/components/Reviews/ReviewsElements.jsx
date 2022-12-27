@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 
 export const InfoContainer = styled.div`
-  background: #010606;
+  background: #111;
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -77,7 +77,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600px;
-  color: #f7f8fa;
+  color: #eee;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -88,7 +88,7 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: #f7f8fa;
+  color: #eee;
 `;
 
 export const RightWrap = styled.div`

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Calendly from "../Calendly";
+import Calendly from "./Calendly";
 import {
   InfoContainer,
   InfoWrapper,

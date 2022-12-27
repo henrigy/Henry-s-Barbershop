@@ -35,7 +35,7 @@ export const SocialMediaWrap = styled.div`
 `;
 
 export const SocialLogo = styled(Link)`
-  color: #fff;
+  color: #eee;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
@@ -46,7 +46,7 @@ export const SocialLogo = styled(Link)`
   font-weight: bold;
 
   &:hover {
-    color: #000;
+    color: #111;
     transition: 0.2s ease-in-out;
   }
 `;
@@ -58,16 +58,16 @@ export const SocialIcons = styled.div`
   width: 240px;
 `;
 export const SocialIconLink = styled.a`
-  color: #fff;
+  color: #eee;
   font-size: 24px;
 
   &:hover {
-    color: #000;
+    color: #111;
     transition: 0.2s ease-in-out;
   }
 `;
 
 export const WebsiteRights = styled.small`
-  color: #fff;
+  color: #eee;
   margin-bottom: 16px;
 `;
