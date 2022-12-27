@@ -15,12 +15,10 @@ const CarouselSlider = ({ slides }) => {
   };
 
   useEffect(() => {
-    // Set up the interval function to update the current slide every 5 seconds
     const interval = setInterval(() => {
       setCurrent((current + 1) % length);
     }, 5000);
 
-    // Clear the interval when the component unmounts to prevent memory leaks
     return () => clearInterval(interval);
   }, [current, length]);
 
