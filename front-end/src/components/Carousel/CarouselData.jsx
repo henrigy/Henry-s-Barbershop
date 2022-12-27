@@ -6,7 +6,6 @@ import Trevor from "../../images/Trevor.jpeg";
 import Xander from "../../images/Xander.jpeg";
 import Julio from "../../images/Julio.jpeg";
 import Robert from "../../images/Robert.jpeg";
-import Devlin from "../../images/Devlin.jpeg";
 
 export const CarouselData = [
   {
@@ -26,9 +25,6 @@ export const CarouselData = [
   },
   {
     image: Robert,
-  },
-  {
-    image: Devlin,
   },
   {
     image: Xander,
