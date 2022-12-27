@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Calendly from "../Calendly";
 import {
   InfoContainer,
   InfoWrapper,
   InfoRow,
-  Column1,
+  ScheduleColumn1,
   Column2,
   TextWrapper,
   TopLine,
@@ -14,12 +14,35 @@ import {
 } from "./ScheduleElements";
 
 const Schedule = () => {
+  const [column1Visible, setColumn1Visible] = useState(false);
+
+  const handleScroll = () => {
+    const column1Element = document.querySelector("#scheduleColumn1");
+    const column1Rect = column1Element.getBoundingClientRect();
+    const column1InViewport =
+      column1Rect.top >= 0 && column1Rect.bottom <= window.innerHeight;
+
+    if (column1InViewport) {
+      setColumn1Visible(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <InfoContainer id={"schedule"}>
         <InfoWrapper>
           <InfoRow>
-            <Column1>
+            <ScheduleColumn1
+              id={"scheduleColumn1"}
+              className={column1Visible ? "visible" : ""}
+            >
               <TextWrapper>
                 <TopLine>Schedule</TopLine>
                 <Heading>Lock-in your next appointment</Heading>
@@ -42,7 +65,7 @@ const Schedule = () => {
                   &nbsp;on Instagram.
                 </Subtitle>
               </TextWrapper>
-            </Column1>
+            </ScheduleColumn1>
             <Column2>
               <RightWrap>
                 <Calendly />

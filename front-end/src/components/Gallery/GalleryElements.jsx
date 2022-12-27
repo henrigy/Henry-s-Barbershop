@@ -26,14 +26,22 @@ export const InfoRow = styled.div`
     grid-template-areas: "col1 col1" "col2 col2";
   }
 `;
-export const Column1 = styled.div`
+export const GalleryColumn1 = styled.div`
+  transition: all 0.4s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
-
   @media screen and (max-width: 768px) {
     margin-bottom: 0px;
     height: 32vh;
+  }
+
+  &.visible {
+    transform: translateX(0);
+    opacity: 1;
   }
 `;
 export const Column2 = styled.div`

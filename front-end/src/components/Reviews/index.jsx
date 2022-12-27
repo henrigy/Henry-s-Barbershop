@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button2 } from "../ButtonElement";
 import PostModal from "../PostModal";
 
@@ -6,7 +6,7 @@ import {
   InfoContainer,
   InfoWrapper,
   InfoRow,
-  Column1,
+  ReviewsColumn1,
   Column2,
   TextWrapper,
   TopLine,
@@ -30,18 +30,41 @@ const Reviews = () => {
     setShowModal((prev) => !prev);
   };
 
+  const [column1Visible, setColumn1Visible] = useState(false);
+
+  const handleScroll = () => {
+    const column1Element = document.querySelector("#reviewsColumn1");
+    const column1Rect = column1Element.getBoundingClientRect();
+    const column1InViewport =
+      column1Rect.top >= 0 && column1Rect.bottom <= window.innerHeight;
+
+    if (column1InViewport) {
+      setColumn1Visible(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <InfoContainer id={"reviews"}>
         <InfoWrapper>
           <InfoRow>
-            <Column1>
+            <ReviewsColumn1
+              id={"reviewsColumn1"}
+              className={column1Visible ? "visible" : ""}
+            >
               <TextWrapper>
                 <TopLine>Reviews</TopLine>
-                <Heading>Let us know about your experience</Heading>
+                <Heading>How was your experience?</Heading>
                 <Subtitle>
-                  Please comment about your experience, upload a picture, and
-                  leave us your thoughts!
+                  Please give us a rating, upload a picture, and leave us your
+                  thoughts!
                 </Subtitle>
                 <ReviewsBtnWrapper>
                   <Button2
@@ -60,7 +83,7 @@ const Reviews = () => {
                 </ReviewsBtnWrapper>
               </TextWrapper>
               <PostModal showModal={showModal} setShowModal={setShowModal} />
-            </Column1>
+            </ReviewsColumn1>
             <Column2>
               <RightWrap>{/* can put in additional elements here */}</RightWrap>
             </Column2>
