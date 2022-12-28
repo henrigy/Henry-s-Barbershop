@@ -92,7 +92,7 @@ export const NameContainer = styled.div`
     border: 2px solid #333333;
     border-radius: 10px;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     box-sizing: border-box;
     &:hover {
       border: 3px solid #0437f2;
@@ -172,10 +172,9 @@ export const CommentContainer = styled.div`
     width: 530px;
     height: 100px;
     border: 2px solid #333333;
-    // border: 2px solid #ff0000;
     border-radius: 10px;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     box-sizing: border-box;
     overflow-y: scroll;
 
