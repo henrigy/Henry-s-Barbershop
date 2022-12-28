@@ -1,8 +1,13 @@
 # Henry's Barbershop Web Scheduler
 
-Web scheduler for Henry's Barbershop
+Website for Henry's Barbershop  
 Will allow for clients to:
 
-- Schedule appointments
-- View gallery
-- Leave reviews and images
+- Schedule haircut appoinments using an embedded Calendly widget
+- View pictures of past haircuts via a carousel gallery component
+- Read and post reviews (name, rating, & comment) using MongoDB and Mongoose
+
+Future Plans:
+
+- Create own Calendar
+- Allow for pictures to be added in reviews
