@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const InfoContainer = styled.div`
   background: #111;
@@ -21,9 +21,9 @@ export const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
-  grid-template-areas: "col1 col2";
+  grid-template-areas: 'col1 col2';
   @media screen and (max-width: 768px) {
-    grid-template-areas: "col1 col1" "col2 col2";
+    grid-template-areas: 'col1 col1' 'col2 col2';
   }
 `;
 

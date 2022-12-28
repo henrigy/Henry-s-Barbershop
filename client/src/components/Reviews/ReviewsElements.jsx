@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
+import styled from 'styled-components';
+import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const InfoContainer = styled.div`
   background: #111;
@@ -22,9 +22,9 @@ export const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
-  grid-template-areas: "col1 col2";
+  grid-template-areas: 'col1 col2';
   @media screen and (max-width: 768px) {
-    grid-template-areas: "col1 col1" "col2 col2";
+    grid-template-areas: 'col1 col1' 'col2 col2';
   }
 `;
 
@@ -32,7 +32,6 @@ export const ReviewsColumn1 = styled.div`
   transition: all 0.4s ease-in-out;
   transform: translateX(-100%);
   opacity: 0;
-
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
@@ -49,8 +48,9 @@ export const ReviewsColumn1 = styled.div`
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 15px;
   grid-area: col2;
+  height: 70vh;
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0px;
@@ -85,10 +85,14 @@ export const Heading = styled.h1`
 `;
 export const Subtitle = styled.p`
   max-width: 440px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 24px;
   color: #eee;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 15px;
+  }
 `;
 
 export const RightWrap = styled.div`
@@ -97,7 +101,6 @@ export const RightWrap = styled.div`
 `;
 
 export const ReviewsBtnWrapper = styled.div`
-  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;

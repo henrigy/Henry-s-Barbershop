@@ -73,12 +73,6 @@ const Form = ({ showModal, setShowModal }) => {
     handleClear();
   };
 
-  const [hover, setHover] = useState(false);
-
-  const onHover = () => {
-    setHover(!hover);
-  };
-
   return (
     <>
       {showModal ? (
@@ -162,18 +156,18 @@ const Form = ({ showModal, setShowModal }) => {
 
                 <ButtonWrap>
                   <Button3
-                    onMouseEnter={onHover}
-                    onMouseLeave={onHover}
                     primary="true"
-                    dark="true"
+                    // dark="true"
                     smooth={true}
                     duration={500}
-                    type="button"
+                    // type="button"
                     onClick={handleClear}
                   >
                     CLEAR
                   </Button3>
-                  <Button3 onClick={handleSubmit}> POST</Button3>
+                  <Button3 smooth={true} duration={500} onClick={handleSubmit}>
+                    POST
+                  </Button3>
                 </ButtonWrap>
               </ModalContent>
               {/* this is the x icon on the top right of the modal */}
@@ -183,6 +177,8 @@ const Form = ({ showModal, setShowModal }) => {
                   setShowModal((prev) => !prev);
                   handleClear();
                 }}
+                smooth={true}
+                duration={500}
               />
             </ModalWrapper>
           </animated.div>

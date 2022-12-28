@@ -24,7 +24,7 @@ export const ModalWrapper = styled.div`
   display: grid;
   position: relative;
   z-index: 1001;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 45px;
   display: flex;
   justify-content: center;
