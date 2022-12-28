@@ -9,5 +9,5 @@ Will allow for clients to:
 
 Future Plans:
 
-- Create own Calendar
+- Create own calendar
 - Allow for pictures to be added in reviews
