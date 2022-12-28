@@ -1,13 +1,20 @@
 {
-  "name": "back-end",
+  "name": "server",
   "version": "1.0.0",
-  "description": "Planning to use MongoDB as the database for the reviews",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start" : "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "Henry Liu <11.henrybliu@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1",
+    "nodemon": "^2.0.20"
+  }
 }

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Button2 } from "../ButtonElement";
-import Form from "./Form";
+import React, { useState, useEffect } from 'react';
+import { Button2 } from '../ButtonElement';
+import Form from './Form/Form';
+import Posts from './Posts/Posts';
 
 import {
   InfoContainer,
@@ -16,7 +17,7 @@ import {
   ReviewsBtnWrapper,
   ArrowForward,
   ArrowRight,
-} from "./ReviewsElements";
+} from './ReviewsElements';
 
 const Reviews = () => {
   const [hover, setHover] = useState(false);
@@ -33,7 +34,7 @@ const Reviews = () => {
   const [column1Visible, setColumn1Visible] = useState(false);
 
   const handleScroll = () => {
-    const column1Element = document.querySelector("#reviewsColumn1");
+    const column1Element = document.querySelector('#reviewsColumn1');
     const column1Rect = column1Element.getBoundingClientRect();
     const column1InViewport =
       column1Rect.top >= 0 && column1Rect.bottom <= window.innerHeight;
@@ -44,20 +45,20 @@ const Reviews = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <>
-      <InfoContainer id={"reviews"}>
+      <InfoContainer id={'reviews'}>
         <InfoWrapper>
           <InfoRow>
             <ReviewsColumn1
-              id={"reviewsColumn1"}
-              className={column1Visible ? "visible" : ""}
+              id={'reviewsColumn1'}
+              className={column1Visible ? 'visible' : ''}
             >
               <TextWrapper>
                 <TopLine>Reviews</TopLine>
@@ -85,7 +86,9 @@ const Reviews = () => {
             </ReviewsColumn1>
             <Form showModal={showModal} setShowModal={setShowModal} />
             <Column2>
-              <RightWrap>{/* CREATE A REVIEWS DISPLAY HERE */}</RightWrap>
+              <RightWrap>
+                <Posts />
+              </RightWrap>
             </Column2>
           </InfoRow>
         </InfoWrapper>
