@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Button3 } from '../../ButtonElement';
 import { BsFillStarFill } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
+import { createPost } from '../../../actions/posts';
 
 import {
   Background,
@@ -17,10 +19,13 @@ import {
 } from './FormElements';
 
 const Form = ({ showModal, setShowModal }) => {
-  const [rating, setRating] = useState(0);
-  const [comment, setComment] = useState('');
-  const [name, setName] = useState('');
+  const [postData, setPostData] = useState({
+    creator: '',
+    rating: 0,
+    comment: '',
+  });
   const [submitted, setSubmitted] = useState(false);
+  const dispatch = useDispatch();
 
   const modalRef = useRef();
 
@@ -55,20 +60,28 @@ const Form = ({ showModal, setShowModal }) => {
   }, [keyPress]);
 
   const handleClear = () => {
-    setName('');
-    setRating(0);
-    setComment('');
+    setPostData({
+      creator: '',
+      rating: 0,
+      comment: '',
+    });
     setSubmitted(false); // Set submitted back to false
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true); // Set submitted to true
-    if (name.trim() === '' || rating === 0 || comment.trim() === '') {
+    if (
+      postData.creator.trim() === '' ||
+      postData.rating === 0 ||
+      postData.comment.trim() === ''
+    ) {
       // display an error message or alert to indicate that all fields are required
       return;
     }
     // submit the form and close the modal
+    console.log(postData.creator, postData.rating, postData.comment);
+    dispatch(createPost(postData));
     setShowModal(false);
     handleClear();
   };
@@ -86,19 +99,25 @@ const Form = ({ showModal, setShowModal }) => {
                   <textarea
                     style={{
                       border:
-                        submitted && name.trim() === ''
+                        submitted && postData.creator.trim() === ''
                           ? '2px solid red'
                           : 'none',
 
                       resize: 'none',
                     }}
                     id="name"
-                    value={name}
-                    onChange={(event) => setName(event.target.value)}
+                    value={postData.creator}
+                    onChange={(event) =>
+                      setPostData({ ...postData, creator: event.target.value })
+                    }
                     maxLength="50"
                   />
-                  <p style={{ color: name.length === 50 ? 'red' : 'inherit' }}>
-                    {name.length}/50
+                  <p
+                    style={{
+                      color: postData.creator.length === 50 ? 'red' : 'inherit',
+                    }}
+                  >
+                    {postData.creator.length}/50
                   </p>
                 </NameContainer>
 
@@ -107,7 +126,9 @@ const Form = ({ showModal, setShowModal }) => {
                   <StarsRow
                     style={{
                       border:
-                        submitted && rating === 0 ? '2px solid red' : 'none',
+                        submitted && postData.rating === 0
+                          ? '2px solid red'
+                          : 'none',
                     }}
                   >
                     {[1, 2, 3, 4, 5].map((ratingValue) => (
@@ -115,11 +136,18 @@ const Form = ({ showModal, setShowModal }) => {
                         key={ratingValue}
                         role="button"
                         aria-label={`${ratingValue} out of 5 stars`}
-                        onClick={() => setRating(ratingValue)}
-                        onKeyPress={() => setRating(ratingValue)}
+                        onClick={() =>
+                          setPostData({ ...postData, rating: ratingValue })
+                        }
+                        onKeyPress={() =>
+                          setPostData({ ...postData, rating: ratingValue })
+                        }
                         tabIndex={0}
                         style={{
-                          color: ratingValue <= rating ? '#FFD700' : '#CCCCCC',
+                          color:
+                            ratingValue <= postData.rating
+                              ? '#FFD700'
+                              : '#CCCCCC',
                           cursor: 'pointer',
                         }}
                       >
@@ -134,23 +162,26 @@ const Form = ({ showModal, setShowModal }) => {
                   <textarea
                     style={{
                       border:
-                        submitted && comment.trim() === ''
+                        submitted && postData.comment.trim() === ''
                           ? '2px solid red'
                           : 'none',
                       overflowY: 'scroll',
                       resize: 'none',
                     }}
                     id="comment"
-                    value={comment}
-                    onChange={(event) => setComment(event.target.value)}
+                    value={postData.comment}
+                    onChange={(event) =>
+                      setPostData({ ...postData, comment: event.target.value })
+                    }
                     maxLength="500"
                   />
                   <p
                     style={{
-                      color: comment.length === 500 ? 'red' : 'inherit',
+                      color:
+                        postData.comment.length === 500 ? 'red' : 'inherit',
                     }}
                   >
-                    {comment.length}/500
+                    {postData.comment.length}/500
                   </p>
                 </CommentContainer>
 
