@@ -9,5 +9,6 @@ Will allow for clients to:
 
 Future Plans:
 
+- Scaled for mobile devices
 - Create own calendar
 - Allow for pictures to be added in reviews
