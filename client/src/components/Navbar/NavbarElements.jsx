@@ -44,6 +44,11 @@ export const NavLogo = styled(LinkR)`
     color: #ff5f1f;
     transition: 0.2s ease-in-out;
   }
+
+  @media screen and (max-width: 450px) {
+    margin-left: 0px;
+    font-size: 1.3rem;
+  }
 `;
 
 export const MobileIcon = styled.div`
