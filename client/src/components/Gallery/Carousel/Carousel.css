@@ -16,7 +16,7 @@
 
 .right-arrow {
   position: absolute;
-  top: 50%;
+  justify-content: center;
   right: 25px;
   font-size: 3vw;
   color: #111;
@@ -29,13 +29,12 @@
   .right-arrow {
     right: 45px;
     font-size: 5vw;
-
   }
 }
 
 .left-arrow {
   position: absolute;
-  top: 50%;
+  justify-content: center;
   left: 25px;
   font-size: 3vw;
   color: #111;
