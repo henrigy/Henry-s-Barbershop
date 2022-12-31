@@ -63,4 +63,15 @@ export const Button3 = styled.div`
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? '#f28500' : '#007FFF')};
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    width: 60px;
+    height: 20px;
+  }
+  @media screen and (max-height: 650px) {
+    font-size: 14px;
+    width: 60px;
+    height: 20px;
+  }
 `;

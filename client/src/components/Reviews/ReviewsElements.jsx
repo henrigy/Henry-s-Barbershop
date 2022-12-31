@@ -7,6 +7,7 @@ export const InfoContainer = styled.div`
     padding: 100px 0;
   }
 `;
+
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
@@ -18,6 +19,7 @@ export const InfoWrapper = styled.div`
   padding: 0 24px;
   justify-content: center;
 `;
+
 export const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
@@ -32,11 +34,12 @@ export const ReviewsColumn1 = styled.div`
   transition: all 0.4s ease-in-out;
   transform: translateX(-100%);
   opacity: 0;
+
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
   @media screen and (max-width: 768px) {
-    margin-bottom: 0px;
+    margin-bottom: 10vh;
     height: 32vh;
   }
 
@@ -48,13 +51,12 @@ export const ReviewsColumn1 = styled.div`
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 0 15px;
   grid-area: col2;
-  height: 70vh;
-
+  height: 75vh;
   @media screen and (max-width: 768px) {
     margin-bottom: 0px;
-    height: 54vh;
+    height: 50vh;
   }
 `;
 export const TextWrapper = styled.div`
@@ -82,22 +84,46 @@ export const Heading = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
+
+  @media screen and (max-height: 768px) and (max-width: 480px) {
+    font-size: 28px;
+  }
+  @media screen and (max-height: 480px) {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
 `;
 export const Subtitle = styled.p`
   max-width: 440px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
   color: #eee;
 
-  @media screen and (max-width: 768px) {
-    margin-bottom: 15px;
+  @media screen and (max-height: 768px) and (max-width: 480px) {
+    font-size: 14px;
+  }
+  @media screen and (max-height: 480px) {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
   }
 `;
 
 export const RightWrap = styled.div`
   max-width: 555px;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-height: 480px) and (max-width: 768px) {
+    margin-top: 13%;
+  }
 `;
 
 export const ReviewsBtnWrapper = styled.div`

@@ -10,7 +10,7 @@ const Posts = () => {
   return (
     <PostsContainer>
       {posts.map((post) => (
-        <Post post={post} />
+        <Post key={post.createdAt} post={post} />
       ))}
     </PostsContainer>
   );

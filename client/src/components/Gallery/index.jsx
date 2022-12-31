@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Carousel from "./Carousel";
+import React, { useState, useEffect } from 'react';
 
+import Carousel from './Carousel';
 import {
   InfoContainer,
   InfoWrapper,
@@ -12,13 +12,13 @@ import {
   Heading,
   Subtitle,
   RightWrap,
-} from "./GalleryElements";
+} from './GalleryElements';
 
 const Gallery = () => {
   const [column1Visible, setColumn1Visible] = useState(false);
 
   const handleScroll = () => {
-    const column1Element = document.querySelector("#galleryColumn1");
+    const column1Element = document.querySelector('#galleryColumn1');
     const column1Rect = column1Element.getBoundingClientRect();
     const column1InViewport =
       column1Rect.top >= 0 && column1Rect.bottom <= window.innerHeight;
@@ -29,19 +29,19 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
     <>
-      <InfoContainer id={"gallery"}>
+      <InfoContainer id={'gallery'}>
         <InfoWrapper>
           <InfoRow>
             <GalleryColumn1
-              id={"galleryColumn1"}
-              className={column1Visible ? "visible" : ""}
+              id={'galleryColumn1'}
+              className={column1Visible ? 'visible' : ''}
             >
               <TextWrapper>
                 <TopLine>Gallery</TopLine>
@@ -52,12 +52,12 @@ const Gallery = () => {
                     href="https://www.instagram.com/henrysbarbershop/?hl=en"
                     target="_blank"
                     rel="noreferrer"
-                    style={{ color: "#010606" }}
+                    style={{ color: '#010606' }}
                     onMouseOver={({ target }) => {
-                      target.style.color = "#0437f2";
+                      target.style.color = '#0437f2';
                     }}
                     onMouseOut={({ target }) => {
-                      target.style.color = "#010606";
+                      target.style.color = '#010606';
                     }}
                   >
                     @Henrysbarbershop

@@ -13,9 +13,14 @@ import {
 import { BsFillStarFill } from 'react-icons/bs';
 
 const Post = ({ post }) => {
-  const createdAtPst = moment(post.createdAt)
-    .tz('America/Los_Angeles')
-    .format('YYYY-MM-DD hh:mm:ss A');
+  const isoTime = post.createdAt;
+  const pacificTime = moment.tz(isoTime, 'America/Los_Angeles');
+  const pacificTimeFormatted = pacificTime.format('YYYY-MM-DD hh:mm:ss A');
+  const pacificTimeMoment = moment(
+    pacificTimeFormatted,
+    'YYYY-MM-DD hh:mm:ss A'
+  );
+  const relativeTime = pacificTimeMoment.fromNow();
 
   const getStars = (rating, maxStars) => {
     const stars = [];
@@ -34,11 +39,11 @@ const Post = ({ post }) => {
         {/* <StarRow> */}
         <Rating>{getStars(post.rating, 5)}</Rating>
         {/* </StarRow> */}
-        <Time>{moment(createdAtPst).fromNow()}</Time>
+        <Time>{relativeTime}</Time>
       </TopRow>
       <BottomHalf>
         <Comment>"{post.comment}"</Comment>
-        <Creator> - {post.creator}</Creator>
+        <Creator> -{post.creator}</Creator>
       </BottomHalf>
     </PostContainer>
   );

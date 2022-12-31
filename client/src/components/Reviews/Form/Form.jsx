@@ -189,14 +189,14 @@ const Form = ({ showModal, setShowModal }) => {
                   <Button3
                     primary="true"
                     // dark="true"
-                    smooth={true}
+                    // smooth={true}
                     duration={500}
                     // type="button"
                     onClick={handleClear}
                   >
                     CLEAR
                   </Button3>
-                  <Button3 smooth={true} duration={500} onClick={handleSubmit}>
+                  <Button3 duration={500} onClick={handleSubmit}>
                     POST
                   </Button3>
                 </ButtonWrap>
@@ -208,7 +208,7 @@ const Form = ({ showModal, setShowModal }) => {
                   setShowModal((prev) => !prev);
                   handleClear();
                 }}
-                smooth={true}
+                // smooth={true}
                 duration={500}
               />
             </ModalWrapper>

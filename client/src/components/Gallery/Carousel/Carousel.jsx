@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { CarouselData } from "./CarouselData";
-import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
+import React, { useState, useEffect } from 'react';
+import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
+
+import { CarouselData } from './CarouselData';
 
 const CarouselSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -32,7 +33,7 @@ const CarouselSlider = ({ slides }) => {
       {CarouselData.map((slide, index) => {
         return (
           <div
-            className={index === current ? "slide active" : "slide"}
+            className={index === current ? 'slide active' : 'slide'}
             key={index}
           >
             {index === current && (

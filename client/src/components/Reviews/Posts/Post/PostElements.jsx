@@ -9,6 +9,9 @@ export const PostContainer = styled.div`
   padding: 10px;
   margin: 5px;
   background: #dedede;
+  // background: orange;
+  // max-width: 100%;
+  width: 100%;
 `;
 
 export const TopRow = styled.div`
@@ -35,12 +38,12 @@ export const BottomHalf = styled.div`
 
 export const Comment = styled.h4`
   font-weight: normal;
-  overflow: hidden;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
 export const Creator = styled.h5`
   padding: 0 20px;
   margin-left: auto;
   font-weight: 600;
+  word-break: break-all;
 `;

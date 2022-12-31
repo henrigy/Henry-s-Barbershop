@@ -1,5 +1,5 @@
-import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
-import styled from "styled-components";
+import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
+import styled from 'styled-components';
 
 export const LandingContainer = styled.div`
 background: #0c0c0c;
@@ -62,6 +62,11 @@ export const LandingH1 = styled.h1`
   }
   @media screen and (max-width: 480px) {
     font-size: 32px;
+  }
+
+  @media screen and (max-height: 400px) {
+    margin-top: 30px;
+    font-size: 28px;
   }
 `;
 

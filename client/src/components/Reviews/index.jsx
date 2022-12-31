@@ -73,7 +73,6 @@ const Reviews = () => {
                     onMouseLeave={onHover}
                     primary="true"
                     dark="true"
-                    smooth={true}
                     duration={500}
                     onClick={openModal}
                     // spy={true}

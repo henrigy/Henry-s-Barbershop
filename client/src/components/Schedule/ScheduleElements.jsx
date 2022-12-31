@@ -9,7 +9,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  min-height: 92vh;
+  height: 92vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -81,6 +81,20 @@ export const Heading = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
+
+  @media screen and (max-height: 768px) and (max-width: 480px) {
+    font-size: 28px;
+  }
+
+  @media screen and (max-height: 480px) {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
 `;
 export const Subtitle = styled.p`
   max-width: 440px;
@@ -88,9 +102,29 @@ export const Subtitle = styled.p`
   font-size: 18px;
   line-height: 24px;
   color: #eee;
+
+  @media screen and (max-height: 768px) and (max-width: 480px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-height: 480px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
 `;
 
 export const RightWrap = styled.div`
   max-width: 555px;
   height: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-height: 480px) and (max-width: 768px) {
+    margin-top: 13%;
+  }
 `;

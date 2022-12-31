@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Video from "../../video/video.mp4";
-import { Button } from "../ButtonElement";
+import React, { useState } from 'react';
+import Video from '../../video/video.mp4';
+import { Button } from '../ButtonElement';
 import {
   LandingContainer,
   LandingBg,
@@ -11,7 +11,7 @@ import {
   LandingBtnWrapper,
   ArrowForward,
   ArrowRight,
-} from "./LandingElements";
+} from './LandingElements';
 
 const LandingSection = () => {
   const [hover, setHover] = useState(false);

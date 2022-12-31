@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
+import React, { useState, useEffect } from 'react';
+import { FaBars } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
 import {
   Nav,
   NavbarContainer,
@@ -9,8 +9,8 @@ import {
   NavMenu,
   NavLinks,
   NavItem,
-} from "./NavbarElements";
-import { animateScroll as scroll } from "react-scroll";
+} from './NavbarElements';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = ({ toggle }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", changeNav);
+    window.addEventListener('scroll', changeNav);
   }, []);
 
   const toggleHome = () => {
@@ -32,18 +32,18 @@ const Navbar = ({ toggle }) => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
+      <IconContext.Provider value={{ color: '#fff' }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
               HENRY'S BARBERSHOP
             </NavLogo>
             <MobileIcon
-              onMouseOver={({ target }) => (target.style.color = "#ff5f1f")}
-              onMouseOut={({ target }) => (target.style.color = "black")}
+              onMouseOver={({ target }) => (target.style.color = '#ff5f1f')}
+              onMouseOut={({ target }) => (target.style.color = 'black')}
               onClick={toggle}
             >
-              <FaBars style={{ color: "black" }} />
+              <FaBars style={{ color: 'black' }} />
             </MobileIcon>
             <NavMenu>
               <NavItem>

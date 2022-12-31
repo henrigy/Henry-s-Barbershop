@@ -17,7 +17,7 @@
 .right-arrow {
   position: absolute;
   justify-content: center;
-  right: 25px;
+  right: 5%;
   font-size: 3vw;
   color: #111;
   z-index: 5;
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 768px) {
   .right-arrow {
-    right: 45px;
+    right: 5%;
     font-size: 5vw;
   }
 }
@@ -35,7 +35,7 @@
 .left-arrow {
   position: absolute;
   justify-content: center;
-  left: 25px;
+  left: 5%;
   font-size: 3vw;
   color: #111;
   z-index: 5;
@@ -45,7 +45,7 @@
 
 @media screen and (max-width: 768px) {
     .left-arrow {
-      left: 45px;
+      left: 5%;
       font-size: 5vw;
     }
 }
@@ -53,6 +53,24 @@
 .slide {
   opacity: 0;
   transition-duration: 1s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .slide {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-height: 480px) {
+  .slide {
+    transform: scale(.3);
+  }
+}
+
+@media screen and (max-height: 768px) and (max-width: 480px) {
+  .slide {
+    transform: scale(1.2);
+  }
 }
 
 .slide.active {
@@ -63,6 +81,18 @@
 
 @media screen and (max-width: 768px) {
   .slide.active {
-    transform: scale(.93);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-height: 480px) {
+  .slide.active {
+    transform: scale(.3);
+  }
+}
+
+@media screen and (max-height: 768px) and (max-width: 480px) {
+  .slide.active {
+    transform: scale(1.2);
   }
 }

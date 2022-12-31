@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
   background: #ff5f1f;
@@ -57,6 +57,7 @@ export const SocialIcons = styled.div`
   align-items: center;
   width: 240px;
 `;
+
 export const SocialIconLink = styled.a`
   color: #eee;
   font-size: 24px;
