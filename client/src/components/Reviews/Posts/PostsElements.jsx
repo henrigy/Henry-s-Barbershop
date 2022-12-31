@@ -5,4 +5,5 @@ export const PostsContainer = styled.div`
   background: #eee;
   padding: 15px;
   border-radius: 15px;
+  overflow: auto;
 `;

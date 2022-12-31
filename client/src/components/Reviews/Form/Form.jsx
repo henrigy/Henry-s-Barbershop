@@ -146,7 +146,7 @@ const Form = ({ showModal, setShowModal }) => {
                         style={{
                           color:
                             ratingValue <= postData.rating
-                              ? '#FFD700'
+                              ? '#0437f2'
                               : '#CCCCCC',
                           cursor: 'pointer',
                         }}
