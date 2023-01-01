@@ -18,10 +18,6 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Hello, we have connected');
-});
-
 mongoose.set('strictQuery', false);
 
 mongoose
