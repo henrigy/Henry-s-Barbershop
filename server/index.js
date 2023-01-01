@@ -9,7 +9,7 @@ import postRoutes from './routes/posts.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 10000;
 const CONNECTION_URL = process.env.MONGODB_URI;
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
