@@ -1,6 +1,6 @@
 # Henry's Barbershop Web Scheduler
 
-Website for Henry's Barbershop  
+Website for Henry's Barbershop: https://henrysbarbershop.netlify.app/  
 Will allow for clients to:
 
 - Schedule haircut appoinments using an embedded Calendly widget
@@ -9,6 +9,5 @@ Will allow for clients to:
 
 Future Plans:
 
-- Scaled for mobile devices
 - Create own calendar
 - Allow for pictures to be added in reviews
