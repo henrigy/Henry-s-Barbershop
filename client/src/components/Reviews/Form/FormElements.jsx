@@ -49,7 +49,8 @@ export const ModalContent = styled.div`
   line-height: 1.8;
   color: #111;
   padding: 10px;
-  min-width: 90%;
+  width: 100%;
+  max-width: 800px;
 `;
 
 export const CloseModalButton = styled(FaTimes)`
@@ -100,12 +101,13 @@ export const NameContainer = styled.div`
   textarea {
     background: #dddddd;
     width: 66.5%;
-    height: 60%;
+    height: 70%;
     border: 2px solid #333333;
     border-radius: 10px;
     font-size: 16px;
     padding: 10px;
     box-sizing: border-box;
+    overflow-y: auto;
 
     &:hover {
       border: 3px solid #0437f2;
@@ -259,6 +261,7 @@ export const CommentContainer = styled.div`
     font-size: 16px;
     padding: 10px;
     box-sizing: border-box;
+    overflow-y: auto;
 
     &:hover {
       border: 3px solid #0437f2;

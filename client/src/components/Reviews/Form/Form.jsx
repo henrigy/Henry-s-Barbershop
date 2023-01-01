@@ -162,7 +162,6 @@ const Form = ({ showModal, setShowModal }) => {
                         submitted && postData.comment.trim() === ''
                           ? '2px solid red'
                           : 'none',
-                      overflowY: 'scroll',
                       resize: 'none',
                     }}
                     id="comment"

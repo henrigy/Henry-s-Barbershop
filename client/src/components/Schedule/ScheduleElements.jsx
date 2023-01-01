@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const InfoContainer = styled.div`
   background: #111;
+  min-height: 95vh;
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -9,7 +10,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 92vh;
+  min-height: 100vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -54,6 +55,9 @@ export const Column2 = styled.div`
   padding: 0 15px;
   grid-area: col2;
   height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (max-width: 768px) {
     margin-bottom: 0px;
@@ -124,8 +128,10 @@ export const Subtitle = styled.p`
 `;
 
 export const RightWrap = styled.div`
+  width: 100%;
   max-width: 555px;
   height: 100%;
+  max-height: 800px;
   padding: 20px 0;
   display: flex;
   justify-content: center;
