@@ -27,8 +27,6 @@ const CarouselSlider = ({ slides }) => {
   }
   return (
     <section className="slider">
-      <SlArrowLeft className="left-arrow" onClick={prevSlide} />
-      <SlArrowRight className="right-arrow" onClick={nextSlide} />
       {CarouselData.map((slide, index) => {
         return (
           <div
@@ -36,7 +34,11 @@ const CarouselSlider = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide.image} alt="haircut pic" className="image" />
+              <>
+                <SlArrowLeft className="left-arrow" onClick={prevSlide} />
+                <img src={slide.image} alt="haircut pic" className="image" />
+                <SlArrowRight className="right-arrow" onClick={nextSlide} />
+              </>
             )}
           </div>
         );

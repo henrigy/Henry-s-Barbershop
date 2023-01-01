@@ -15,9 +15,10 @@
 }
 
 .right-arrow {
-  position: absolute;
+  position: fixed;
   justify-content: center;
   right: 5%;
+  top: 45%;
   font-size: 3vw;
   color: #111;
   z-index: 5;
@@ -33,8 +34,9 @@
 }
 
 .left-arrow {
-  position: absolute;
+  position: fixed;
   justify-content: center;
+  top: 45%;
   left: 5%;
   font-size: 3vw;
   color: #111;
