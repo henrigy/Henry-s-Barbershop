@@ -64,21 +64,19 @@ const Form = ({ showModal, setShowModal }) => {
       rating: 0,
       comment: '',
     });
-    setSubmitted(false); // Set submitted back to false
+    setSubmitted(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true); // Set submitted to true
+    setSubmitted(true);
     if (
       postData.creator.trim() === '' ||
       postData.rating === 0 ||
       postData.comment.trim() === ''
     ) {
-      // display an error message or alert to indicate that all fields are required
       return;
     }
-    // submit the form and close the modal
     console.log(postData.creator, postData.rating, postData.comment);
     dispatch(createPost(postData));
     setShowModal(false);
@@ -185,14 +183,7 @@ const Form = ({ showModal, setShowModal }) => {
                 </CommentContainer>
 
                 <ButtonWrap>
-                  <Button3
-                    primary="true"
-                    // dark="true"
-                    // smooth={true}
-                    duration={500}
-                    // type="button"
-                    onClick={handleClear}
-                  >
+                  <Button3 primary="true" duration={500} onClick={handleClear}>
                     CLEAR
                   </Button3>
                   <Button3 duration={500} onClick={handleSubmit}>
@@ -206,7 +197,6 @@ const Form = ({ showModal, setShowModal }) => {
                   setShowModal((prev) => !prev);
                   handleClear();
                 }}
-                // smooth={true}
                 duration={500}
               />
             </ModalWrapper>
