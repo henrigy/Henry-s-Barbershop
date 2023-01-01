@@ -36,9 +36,7 @@ const Post = ({ post }) => {
   return (
     <PostContainer>
       <TopRow>
-        {/* <StarRow> */}
         <Rating>{getStars(post.rating, 5)}</Rating>
-        {/* </StarRow> */}
         <Time>{relativeTime}</Time>
       </TopRow>
       <BottomHalf>

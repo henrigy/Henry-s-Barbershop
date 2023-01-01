@@ -200,7 +200,6 @@ const Form = ({ showModal, setShowModal }) => {
                   </Button3>
                 </ButtonWrap>
               </ModalContent>
-              {/* this is the x icon on the top right of the modal */}
               <CloseModalButton
                 aria-label="Close modal"
                 onClick={() => {
