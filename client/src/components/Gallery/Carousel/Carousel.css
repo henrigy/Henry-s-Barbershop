@@ -14,44 +14,6 @@
   border-radius: 15px;
 }
 
-.right-arrow {
-  position: fixed;
-  justify-content: center;
-  right: 5%;
-  top: 45%;
-  font-size: 3vw;
-  color: #111;
-  z-index: 5;
-  cursor: pointer;
-  user-select: none;
-}
-
-@media screen and (max-width: 768px) {
-  .right-arrow {
-    right: 5%;
-    font-size: 5vw;
-  }
-}
-
-.left-arrow {
-  position: fixed;
-  justify-content: center;
-  top: 45%;
-  left: 5%;
-  font-size: 3vw;
-  color: #111;
-  z-index: 5;
-  cursor: pointer;
-  user-select: none;
-}
-
-@media screen and (max-width: 768px) {
-    .left-arrow {
-      left: 5%;
-      font-size: 5vw;
-    }
-}
-
 .slide {
   opacity: 0;
   transition-duration: 1s ease;
