@@ -28,6 +28,7 @@ export const ModalWrapper = styled.div`
   padding: 20px 45px;
   display: flex;
   justify-content: center;
+
   @media screen and (max-width: 768px) {
     height: 70vh;
   }
@@ -47,7 +48,6 @@ export const ModalContent = styled.div`
   align-items: center;
   line-height: 1.8;
   color: #111;
-  // padding: 10px 10px;
   padding: 10px;
   min-width: 90%;
 `;
@@ -79,6 +79,7 @@ export const Title = styled.h2`
   @media screen and (max-width: 768px) {
     display: none;
   }
+
   @media screen and (max-height: 650px) {
     display: none;
   }
@@ -98,7 +99,6 @@ export const NameContainer = styled.div`
 
   textarea {
     background: #dddddd;
-    // width: 530px;
     width: 66.5%;
     height: 60%;
     border: 2px solid #333333;
@@ -106,11 +106,11 @@ export const NameContainer = styled.div`
     font-size: 16px;
     padding: 10px;
     box-sizing: border-box;
+
     &:hover {
       border: 3px solid #0437f2;
     }
   }
-
   p {
     margin-left: 5px;
     margin-right: 5px;
@@ -187,7 +187,6 @@ export const RatingContainer = styled.div`
     cursor: pointer;
     border: 2px solid transparent;
   }
-
   span:hover {
     border-color: blue;
   }
@@ -202,6 +201,7 @@ export const RatingContainer = styled.div`
       margin: -1px;
     }
   }
+
   @media screen and (max-width: 768px) {
     padding-top: 0;
     padding-bottom: 0;
@@ -243,11 +243,13 @@ export const CommentContainer = styled.div`
   width: 100%;
   display: flex;
   padding: 5px;
+
   label {
     font-size: 20px;
     display: block;
     margin-right: 15px;
   }
+
   textarea {
     background: #dddddd;
     width: 66.5%;

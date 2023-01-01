@@ -1,10 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Button3 } from '../../ButtonElement';
 import { BsFillStarFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { createPost } from '../../../actions/posts';
-
 import {
   Background,
   ModalWrapper,
@@ -17,6 +14,8 @@ import {
   ButtonWrap,
   StarsRow,
 } from './FormElements';
+import { Button3 } from '../../ButtonElement';
+import { createPost } from '../../../actions/posts';
 
 const Form = ({ showModal, setShowModal }) => {
   const [postData, setPostData] = useState({

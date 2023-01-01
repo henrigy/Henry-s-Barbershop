@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import 'moment-timezone';
+import { BsFillStarFill } from 'react-icons/bs';
 import {
   PostContainer,
   TopRow,
@@ -10,7 +11,6 @@ import {
   Rating,
   Time,
 } from './PostElements';
-import { BsFillStarFill } from 'react-icons/bs';
 
 const Post = ({ post }) => {
   const isoTime = post.createdAt;

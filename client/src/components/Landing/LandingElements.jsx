@@ -10,6 +10,7 @@ padding: 0 30px;
 min-height: 100vh;
 position: relative;
 z-index: 1;
+
 :before {
   content: '';
   position: absolute;
@@ -57,9 +58,11 @@ export const LandingH1 = styled.h1`
   color: #eee;
   font-size: 48px;
   text-align: center;
+
   @media screen and (max-width: 768px) {
     font-size: 40px;
   }
+
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }

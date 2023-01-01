@@ -3,6 +3,7 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const InfoContainer = styled.div`
   background: #111;
+
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -25,6 +26,7 @@ export const InfoRow = styled.div`
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
   grid-template-areas: 'col1 col2';
+
   @media screen and (max-width: 768px) {
     grid-template-areas: 'col1 col1' 'col2 col2';
   }
@@ -38,6 +40,7 @@ export const ReviewsColumn1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
+
   @media screen and (max-width: 768px) {
     margin-bottom: 10vh;
     height: 32vh;
@@ -54,16 +57,19 @@ export const Column2 = styled.div`
   padding: 0 15px;
   grid-area: col2;
   height: 75vh;
+
   @media screen and (max-width: 768px) {
     margin-bottom: 0px;
     height: 50vh;
   }
 `;
+
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 60px;
 `;
+
 export const TopLine = styled.p`
   color: #ff5f1f;
   font-size: 16px;
@@ -88,15 +94,18 @@ export const Heading = styled.h1`
   @media screen and (max-height: 768px) and (max-width: 480px) {
     font-size: 28px;
   }
+
   @media screen and (max-height: 480px) {
     font-size: 28px;
     margin-bottom: 10px;
   }
+
   @media screen and (max-width: 600px) {
     font-size: 28px;
     margin-bottom: 5px;
   }
 `;
+
 export const Subtitle = styled.p`
   max-width: 440px;
   margin-bottom: 35px;
@@ -107,10 +116,12 @@ export const Subtitle = styled.p`
   @media screen and (max-height: 768px) and (max-width: 480px) {
     font-size: 14px;
   }
+
   @media screen and (max-height: 480px) {
     font-size: 14px;
     margin-bottom: 0px;
   }
+
   @media screen and (max-width: 600px) {
     font-size: 14px;
   }
@@ -121,6 +132,7 @@ export const RightWrap = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+
   @media screen and (max-height: 480px) and (max-width: 768px) {
     margin-top: 13%;
   }

@@ -35,6 +35,7 @@ export const Button2 = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
+
   &:hover {
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? '#eee' : '#ff5f1f')};
@@ -59,6 +60,7 @@ export const Button3 = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
+
   &:hover {
     transition: all 0.2s ease-in-out;
     background: ${({ primary }) => (primary ? '#f28500' : '#007FFF')};
@@ -69,6 +71,7 @@ export const Button3 = styled.div`
     width: 60px;
     height: 20px;
   }
+
   @media screen and (max-height: 650px) {
     font-size: 14px;
     width: 60px;

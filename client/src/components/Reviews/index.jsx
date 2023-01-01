@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Button2 } from '../ButtonElement';
-import Form from './Form/Form';
-import Posts from './Posts/Posts';
-
 import {
   InfoContainer,
   InfoWrapper,
@@ -18,6 +14,9 @@ import {
   ArrowForward,
   ArrowRight,
 } from './ReviewsElements';
+import { Button2 } from '../ButtonElement';
+import Form from './Form/Form';
+import Posts from './Posts/Posts';
 
 const Reviews = () => {
   const [hover, setHover] = useState(false);
@@ -75,8 +74,6 @@ const Reviews = () => {
                     dark="true"
                     duration={500}
                     onClick={openModal}
-                    // spy={true}
-                    // exact="true"
                   >
                     POST A REVIEW {hover ? <ArrowForward /> : <ArrowRight />}
                   </Button2>

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link as LinkS } from "react-scroll";
-import { FaTimes } from "react-icons/fa";
+import styled from 'styled-components';
+import { Link as LinkS } from 'react-scroll';
+import { FaTimes } from 'react-icons/fa';
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -13,8 +13,8 @@ export const SidebarContainer = styled.aside`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -46,7 +46,9 @@ export const SidebarMenu = styled.ul`
   grid-template-rows: repeat(3, 80px);
   text-align: center;
 
-  @media screen and (max-width: 480px) grid-template-row: repeat(3, 60px);
+  @media screen and (max-width: 480px) {
+    grid-template-row: repeat(3, 60px);
+  } ;
 `;
 
 export const SidebarLink = styled(LinkS)`

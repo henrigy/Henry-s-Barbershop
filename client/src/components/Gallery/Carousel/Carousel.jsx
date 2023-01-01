@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
-
 import { CarouselData } from './CarouselData';
 
 const CarouselSlider = ({ slides }) => {

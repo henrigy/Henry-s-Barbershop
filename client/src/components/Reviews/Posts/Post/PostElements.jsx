@@ -9,8 +9,6 @@ export const PostContainer = styled.div`
   padding: 10px;
   margin: 5px;
   background: #dedede;
-  // background: orange;
-  // max-width: 100%;
   width: 100%;
 `;
 

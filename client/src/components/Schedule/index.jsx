@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Calendly from "./Calendly";
+import React, { useState, useEffect } from 'react';
+import Calendly from './Calendly';
 import {
   InfoContainer,
   InfoWrapper,
@@ -11,13 +11,13 @@ import {
   Heading,
   Subtitle,
   RightWrap,
-} from "./ScheduleElements";
+} from './ScheduleElements';
 
 const Schedule = () => {
   const [column1Visible, setColumn1Visible] = useState(false);
 
   const handleScroll = () => {
-    const column1Element = document.querySelector("#scheduleColumn1");
+    const column1Element = document.querySelector('#scheduleColumn1');
     const column1Rect = column1Element.getBoundingClientRect();
     const column1InViewport =
       column1Rect.top >= 0 && column1Rect.bottom <= window.innerHeight;
@@ -28,20 +28,20 @@ const Schedule = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <>
-      <InfoContainer id={"schedule"}>
+      <InfoContainer id={'schedule'}>
         <InfoWrapper>
           <InfoRow>
             <ScheduleColumn1
-              id={"scheduleColumn1"}
-              className={column1Visible ? "visible" : ""}
+              id={'scheduleColumn1'}
+              className={column1Visible ? 'visible' : ''}
             >
               <TextWrapper>
                 <TopLine>Schedule</TopLine>
@@ -52,12 +52,12 @@ const Schedule = () => {
                     href="https://www.instagram.com/henrysbarbershop/?hl=en"
                     target="_blank"
                     rel="noreferrer"
-                    style={{ color: "#f7f8fa" }}
+                    style={{ color: '#f7f8fa' }}
                     onMouseOver={({ target }) =>
-                      (target.style.color = "#ff5f1f")
+                      (target.style.color = '#ff5f1f')
                     }
                     onMouseOut={({ target }) =>
-                      (target.style.color = "#f7f8fa")
+                      (target.style.color = '#f7f8fa')
                     }
                   >
                     @Henrysbarbershop
