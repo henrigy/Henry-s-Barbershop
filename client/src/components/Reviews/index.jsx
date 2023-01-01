@@ -63,8 +63,8 @@ const Reviews = () => {
                 <TopLine>Reviews</TopLine>
                 <Heading>How was your experience?</Heading>
                 <Subtitle>
-                  Please give us a rating, upload a picture, and leave us your
-                  thoughts!
+                  Please take a moment to rate our barbershop and leave a review
+                  of your experience!
                 </Subtitle>
                 <ReviewsBtnWrapper>
                   <Button2

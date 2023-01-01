@@ -55,7 +55,7 @@ export const LandingContent = styled.div`
 `;
 
 export const LandingH1 = styled.h1`
-  color: #eee;
+  color: #111;
   font-size: 48px;
   text-align: center;
 
@@ -75,7 +75,7 @@ export const LandingH1 = styled.h1`
 
 export const LandingP = styled.p`
   margin-top: 24px;
-  color: #eee;
+  color: #111;
   font-size: 24px;
   text-align: center;
   max-width: 600px;
