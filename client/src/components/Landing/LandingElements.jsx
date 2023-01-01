@@ -2,7 +2,7 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import styled from 'styled-components';
 
 export const LandingContainer = styled.div`
-background: #0c0c0c;
+background: #eee;
 display: flex;
 justify-content: center;
 align-items: center;
