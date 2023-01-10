@@ -77,7 +77,7 @@ const Form = ({ showModal, setShowModal }) => {
     ) {
       return;
     }
-    console.log(postData.creator, postData.rating, postData.comment);
+    // console.log(postData.creator, postData.rating, postData.comment);
     dispatch(createPost(postData));
     setShowModal(false);
     handleClear();
